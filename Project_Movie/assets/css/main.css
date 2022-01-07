@@ -1,0 +1,618 @@
+/* HEADER */
+header
+{
+    position: absolute;
+    top:20px;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header p
+{
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+.nav__list
+{
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+#moviecontent .nav__list--item--link
+{
+    color: white;
+    letter-spacing: 3px;
+    line-height: 0.8em;
+    padding: 20px 24px;
+}
+/* CAROUSEL */
+.movieCarousel
+{
+    position: relative;
+}
+.carousel-caption
+{
+    text-align: left;
+    top:55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.movieCarousel__genre
+{
+    font-size: 0.765rem;
+    color: #fbbd61;
+    letter-spacing: 2px;
+    margin: 0;
+    animation-delay: 0.5s;
+}
+.movieCarousel__name
+{
+    font-size: 2.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.movieCarousel__des
+{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.movieCarousel__trailer
+{
+    display: flex;
+    animation-delay: 0.5s;
+}
+.movieCarousel__trailer>span
+{
+    width: 48px;
+    height:48px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 48px;
+    margin-right: 8px;
+    font-size: 0.8rem;
+}
+.movieCarousel__trailler--btn
+{
+    border: none;
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    letter-spacing: 4px;
+    font-size: 0.7rem;
+    position: relative;
+    overflow: hidden;
+}
+.movieCarousel__trailler--btn:hover
+{
+    color: white ;
+}
+.movieCarousel__trailler--btn span
+{
+    position: relative;
+    
+}
+.movieCarousel__trailler--btn::before
+{
+    content: "";
+    position: absolute;
+    /* display: none; */
+    background-color: #ec7532;
+    width: 110%;
+    height: 100%;
+    top:0;
+    left:0;
+    transform: skewX(30deg) translateX(-105%) ;
+    transition:0.5s;
+
+}
+.movieCarousel__trailler--btn:hover::before
+{
+    transform: translateX(-10px) skewX(30deg);
+}
+#Carouselcontent
+{
+    height: 650px;
+}
+#Carouselcontent .carousel-inner
+{
+    height: 650px;
+}
+#Carouselcontent .carousel-item
+{
+    height: 650px;
+}
+.item1
+{
+    background-image: url(../img/hero-1.jpg);
+    background-position:center;
+}
+.item2
+{
+    background-image: url(../img/hero-2.jpg);
+    background-position:center;
+}
+.item3
+{
+    background-image: url(../img/hero-3.jpg);
+    background-position:center;
+}
+/* indicator */
+.carousel-indicators 
+{
+    justify-content: flex-start;
+    margin: 0;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 0 30px;
+    bottom: 10%;
+}
+.carousel-indicators li
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    opacity: 1;
+    box-sizing: border-box;
+    /* background-clip: unset; */
+}
+.carousel-indicators li.active{
+    background: white;
+}
+.movieCarousel__overlay
+{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background:linear-gradient(to top,black,transparent);
+}
+/* NEW IN */
+.Newin
+{
+    padding: 75px 0;
+}
+
+.newin__title
+{
+    text-align: center;
+    font-size: 1.125rem;
+    color: #4a4a4a;
+    margin: 14px 0;
+}
+.newin__rates
+{
+    text-align: center;
+    color: #fbbd61;
+    margin-bottom: 10px;
+}
+.newin__rates i
+{
+    font-size: 1rem;
+}
+.newin__img
+{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.newin__overlay
+{
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #fbbd61, #ec7532);
+    opacity: 0.9;
+    transform:translateX(-130%) skewX(30deg);
+    transition: 0.5s;
+}
+.newin__img:hover .newin__overlay
+{
+    transform:translateX(-30%) skewX(30deg);
+    
+}
+.newin__img--content
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.newin__img--content a
+{
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.newin__content--icon
+{
+    width: 80px;
+    height: 80px;
+    border: solid 2px white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    transition: 0.5s;
+    transform: scale(1);
+}
+.newin__content--icon:hover
+{
+    transform: scale(0.9);
+}
+.newin__img--read
+{
+    margin:14px 0;
+    font-size: 0.8125rem;
+    letter-spacing: 4px;
+}
+.Newin__content--day
+{
+    color: white;
+    font-size: 0.9375rem;
+
+}
+.newin__img:hover .newin__img--content
+{
+    opacity: 1;
+}
+/* HEADER SCROLL */
+#headerFix
+{
+    background-color: #101010;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transform: translate(-50%,-100%);
+    transition: 0.5s;
+    z-index: 999;
+}
+/* Showtime code thuần */
+.Showtime
+{
+    margin: 60px 0px;
+}
+.showtime__img
+{
+    border-radius: 10px;
+}
+.showtime__genre
+{
+    font-size: 0.875rem;
+    color: #ec7532;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+.showtime__name
+{
+    font-size: 1.5rem;
+    color: #101010;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.showtime__des
+{
+    font-size: 0.875rem;
+    margin-bottom: 14px;
+}
+.showtime__wrap--text
+{
+    margin-bottom: 14px;
+}
+.showtime__wrap--text a
+{
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: #ec7532;
+    letter-spacing: 4px;
+    transition: .3s;
+
+}
+.showtime__wrap--text a:hover
+{
+    color: #101010;
+}
+.showtime__icon--hour
+{
+    margin-right: 4px;
+}
+.showtime__icon--hour, .showtime__view
+{
+    font-size: 0.75rem;
+    color: #4a4a4a;
+    letter-spacing: 1.5px;
+}
+.showtime__btn button
+{
+    background-color: #d8d8d8;
+    color: #717171;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+}
+.showtime__hours
+{
+    font-size: 0.75rem;
+    color: #4a4a4a;
+    letter-spacing: 1.5px;
+}
+.showtime__hours--number
+{
+    color: white;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border:solid 1px #4a4a4a;
+    background-color: #4a4a4a;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+}
+/* SHOWTIMES EDIT CODE BS */
+.Showtime.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border:none ;
+}
+.Showtime .nav-tabs .nav-link:focus, .nav-tabs .nav-link
+{
+    border: none;
+}
+.Showtime .nav-tabs .nav-item
+{
+    margin-bottom: 0;
+}
+.Showtime .nav-tabs .nav-link
+{
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    color: #4a4a4a;
+    padding: 0;
+}
+.Showtime .nav-tabs .nav-link span
+{
+    padding: 15px 30px;
+    display: block;
+}
+.Showtime .nav-tabs .nav-link.active
+{
+    color: #ec7532;
+}
+/* COMING SOON */
+.Comingsoon
+{
+    background:#101010 url(../img/slide-3.png) ;
+    background-size: cover;
+    padding: 75px 0;
+}
+.heading__global.Comingsoon__heding
+{
+    color: white;
+    border-bottom: solid 1px #333;
+    margin-bottom: 40px;
+    font-size: 1.125rem;
+}   
+
+.Comingsoon__genre
+{
+    font-size: 0.875rem;
+    color: #ec7532;
+    letter-spacing: 2px;
+}
+.Comingsoon h2
+{
+    font-size: 2.125rem;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    
+}
+.comingsoon__rating
+{
+    font-size: 0.95rem;
+    color: #fbbd61;
+    margin-right: 14px;
+}
+.comingsoon__calendar
+{
+    color: white;
+    font-size: 0.95rem;
+}
+.comingsoon__calendar i
+{
+    margin-right: 14px;
+}
+.Comingsoon__des
+{
+    font-size: 0.95rem;
+    color: white;
+    font-weight: 400;
+    margin: 14px 0;
+}
+.Comingsoon a
+{
+    font-size: 0.75rem;
+    color: #ec7532;
+    letter-spacing: 4px;
+    text-decoration: none;
+    transition: .3s;
+}
+.Comingsoon a:hover
+{
+    color: white;
+}
+.comingsoon__video img
+{
+    position: relative;
+}
+.comingsoon__video i
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    color: white;
+    width: 80px;
+    height: 80px;
+    border:solid 1px #ec7532;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.6rem;
+    transition: .5s;
+}
+.comingsoon__video:hover.comingsoon__video i
+{
+    transform: translate(-50%,-50%) scale(0.9);
+}
+/* Movielist */
+.Movielist
+{
+    background-color: #101010;
+    padding: 75px 0;
+}
+.Movielist__item
+{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.Movielist__overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: #101010;
+    opacity: 0.6;
+    transition: .5s;
+}
+.Movielist__item:hover .Movielist__overlay
+{
+    opacity: 0;
+}
+/* CONTACT */
+.Contact
+{
+    padding: 75px 0;
+}
+.Contact__content.container
+{
+    text-align: center;
+}
+.Contact__content p
+{
+    font-size: 1.4375rem;
+    color: #4a4a4a;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.Contact__content a
+{
+    font-size: 2.875rem;
+    color: #fbbd61;
+    text-decoration: none;
+}
+/* footer */
+footer
+{
+    padding: 75px 0;
+    background-color: #101010;
+}
+.footer__heding
+{
+    color: #ec7532;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+.footer__list
+{
+    padding-left: 0;
+}
+.footer__list--item
+{
+    list-style: none;
+}
+.footer__list--link
+{
+    color: white;
+    font-size: 0.8125rem;
+    padding: 3px 0;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.footer__list--link:hover
+{
+    color: #fbbd61;
+    text-decoration: none;
+}
+/* RESPONSIVE */
+@media screen and (max-width:991.98px)
+{
+    /* HEADER */
+    .navbar-brand
+    {
+        max-width: 180px;
+    }
+    .navbar-brand img
+    {
+        max-width: 100%;
+    }
+    #moviecontent .nav__list .nav__list--item--link
+    {
+        font-size: 0.8rem;
+        padding: 20px 11px;
+    }
+  
+
+}
+@media screen and (max-width:767.98px){
+    /* GLOBAL */
+    .line.active::after
+    {
+        width: 0;
+    }
+    /* HEADER */
+    header  .navbar-toggler-icon 
+    {
+        color: #fbbd61;
+    }
+    header  .navbar-toggler-icon:focus
+    {
+        outline: none;
+    }
+    #moviecontent
+    {
+        background-color: rgba(0,0,0,0.9);
+        text-align: center;
+    }
+    #moviecontent .active .nav-link
+    {
+        color: #ec7325;
+    }
+    /* CAROUSEL */
+    .movieCarousel .movieCarousel__name
+    {
+        font-size: 2.3rem;
+    }
+    /* SHOWTIME */
+    .Showtime .nav-tabs .nav-item .nav-link
+    {
+        font-size: 16px;
+    }
+    .Showtime .nav-tabs .nav-link span
+    {
+        padding: 10px 20px;
+    }
+}
