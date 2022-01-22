@@ -1,0 +1,119 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    height: 100vh;
+    background:url('../img/cold.png') no-repeat;
+    background-size:cover;
+    background-position: center;
+    position: relative;
+}
+.container.hot {
+    background:url('../img/hot.png') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.weather
+{
+    position:absolute;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.weather__body
+{
+    position:absolute;
+    width: 345px;
+    height:600px;
+    background: url('../img/cold.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 12px;
+    padding: 30px 20px 0;
+}
+.weather__body.hot {
+    background: url('../img/hot.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.weather__search
+{
+    margin-bottom: 45px;
+}
+#address
+{
+    width: 100%;
+    outline:none;
+    border:none;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #96A1D3;
+    transition: all 0.5s;
+    border-top-right-radius:15px;
+    border-bottom-left-radius: 15px;
+}
+#address:focus
+{
+    background-color: #fff;
+    border-top-left-radius:15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius: 0px;
+}
+.weather__address
+{
+    text-align: center;
+    color: #fff;
+}
+.name
+{
+    font-size: 35px;
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
+.weather__address p {
+    font-size: 15px;
+}
+.weather__temparature
+{
+    font-size: 50px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 30px 40px 35px;
+    text-align: center;
+    border-radius:15px;
+    box-shadow:2px 2px 0 2px rgb(0,0,0,0.5);
+    color: #fff;
+    font-weight: 600px;
+    text-shadow: 4px 4px rgb(0,0,0,0.6);
+}
+.weather__status
+{
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 3px 3px rgb(0,0,0,0.4);
+    margin-bottom: 45px;
+}
+.weather__information
+{
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0 50px;
+}
+.weather__item
+{
+    text-align: center;
+}
+.weather__item p
+{
+    margin-top: 10px;
+}
