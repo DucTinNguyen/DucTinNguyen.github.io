@@ -1,0 +1,1090 @@
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+.header
+{
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    position: relative;
+}
+.header::before
+{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #e8e8e8;
+    width: 100%;
+    top:70px;
+
+}
+/* HEADER SEARH */
+.header-with-search
+{
+    display: flex;
+    height: var(--heigh--header-with-search);
+    align-items: center;
+   padding: 0 30px;
+}
+.header__logo
+{
+    
+}
+.header__logo--img
+{
+    width: 150px;
+    max-height: 70px;
+}
+.header__search
+{
+    display: flex;
+    width: 550px;
+    position: relative;
+   margin-left: 24px;
+   flex-grow: 1;
+}
+.header__search--input
+{
+    padding: 10px 0 10px 20px;
+    width: 100%;
+    height: 40px;
+    font-size: 2rem;
+    outline: none;
+    border:solid 1px #e8e8e8;
+}
+.header__search--btn
+{
+   position: absolute;
+   right: 24px;
+   top:50%;
+   border: none;
+   background-color: #fff;
+   cursor: pointer;
+   transform: translateY(-50%);
+}
+.header__search--icon
+{
+    font-size: 2.4rem;
+   color: #9f9f9f;
+    
+}
+.header__fill
+{
+  
+    display: flex;
+    flex-grow: 1;
+     padding: 0 0 0 86px;
+
+}
+.header__fill--list
+{
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+.header__fill--item
+{
+    list-style: none;
+    margin-right: 15px;
+}
+.header__fill--link:hover
+{
+    color:#ec4f21;
+}
+
+.header__fill--link
+{
+    text-decoration: none;
+    
+    color:var(--text-nav);
+    font-size: 2rem;
+}
+.favorite
+{
+    position: relative;
+
+}
+.favorite--notice
+{
+    position: absolute;
+    font-size: 1.4rem;
+    background-color: #ec4f21;
+    border-radius: 50%;
+    padding: 2px 4px;
+    color:var(--primary-color);
+    right: 7%;
+    top:-50%;
+
+}
+.cart
+{
+    position: relative;
+}
+.cart--notice
+{
+    position: absolute;
+    font-size: 1.4rem;
+    background-color: #ec4f21;
+    border-radius: 50%;
+    padding: 2px 4px;
+    color:var(--primary-color);
+    right: -13%;
+    top:-32%;
+
+}
+.header__fill--icon
+{
+    margin-right: 2px;
+}
+.header__fill--title
+{
+    font-size: 1.6rem;
+}
+/* END HEADER SEARCH */
+.header__nav
+{
+    height:var(--heigh--header-nav);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+.header__nav--list
+{
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    
+}
+.header__nav--item
+{
+    list-style: none;
+    margin-right: 32px;
+}
+.header__nav--item--active a
+{
+    color: #ec4f21;
+}
+.header__nav--item-link
+{
+    text-decoration: none;
+    display: block;
+    font-size: 2rem;
+    color:var(--text-nav);
+}
+.header__nav--list-icon
+{
+    font-size: 1.4rem;
+}
+.header__nav--item-link:hover
+{
+    color: #ec4f21;
+}
+.header__nav--item--category::before
+{
+    content: "";
+    position: absolute;
+    /* border-top:20px solid; */
+    width: 93px;
+    height: 20px;
+    top:106px;
+}
+.product
+{
+    display: none;
+    position: absolute;
+    left:0;
+    right:0;
+    top:100%;
+    height: 310px;
+    background-color:var(--primary-color);
+    box-shadow: 10px 0 10px #d6d6d6;
+  animation: fadeIn linear 0.3s;
+}
+.header__nav--item--category:hover .product{
+    display: block;
+}
+/* CATEGORY  SẢN PHÂM */
+.container
+{
+    padding:0 30px;
+}
+.container__category
+{
+    margin-top: 25px;
+}
+.produc__item
+{
+    margin-bottom: 40px;
+}
+.product__item--heading
+{
+    font-size: 1.6rem;
+    color:var(--text-nav);
+    font-weight: 600;
+    cursor: pointer;
+}
+.product__item--heading:hover
+{
+    color: #ec4f21;
+}
+.produc__item--list
+{
+    padding-left: 0;
+    margin-top: 6px;
+    cursor: pointer;
+}
+.produc__item--list--item
+{
+    list-style: none;
+    padding: 4px 0;
+}
+.produc__item--link
+{
+    text-decoration: none;
+    color:var(--text-nav);
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}
+.produc__item--link:hover{
+    color: #ec4f21;
+}
+/*  */
+.product__item--img
+{
+    padding: 8px 0;
+    cursor: pointer;
+}
+.product__img--link
+{
+    width: 100%;
+    height: auto;
+}
+/* RESPONSIVE HEADER  */
+    .header__mobile-tablet--bars
+    {
+        display: none;
+    }
+    .header__mobile-tablet--bars--icon
+    {
+        font-size:3rem;
+    }
+    .wrap__search--cart
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header__mobile-tablet--search
+    {
+        display: none;
+        margin-right: 10px;
+    }
+    .header__mobile-tablet--search--icon
+    {
+        font-size:3rem;
+    }
+    .header__mobile-tablet--cart
+    {
+        display: none;
+    }
+    .header__mobile-tablet--cart--icon
+    {
+        font-size:3rem;
+        position: relative;
+    }
+    .mobile-tablet--cart--icon__number
+    {
+        position: absolute;
+        font-size: 1.4rem;
+        background-color: #ec4f21;
+        color: var(--primary-color);
+        padding: 2px 4px;
+        border-radius: 2rem;
+        right:11%;
+        top:50%;
+        transform: translateY(-100%);
+    }
+    /* BẤM SEARCH  */
+    .overlay__search
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.3);
+        display: none;
+        animation: fadeInOverlay linear 0.2s;
+    }
+    .mobile-tablet-search--category
+    {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 340px;
+        max-width: 340px;
+        z-index: 3;
+        background-color: var(--primary-color);
+        padding: 18px 18px 0;
+        transform: translateX(100%);
+        transition: transform linear 0.5s;
+    }
+    .search--category__header
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search--category__header--heading
+    {
+        font-size: 1.8rem;
+    }
+    .category--times
+    {
+        font-size: 2.2rem;
+        color: #666;
+    }
+    .search--category__body
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .category__search
+    {
+        margin-left: 4px;
+        width: 100%;
+        height: 40px;
+        outline: none;
+        border: solid 1px #e8e8e8;
+        font-size: 1.4rem;
+        padding-left:12px ;
+    }
+    .category__search:focus
+    {
+        border-right: solid 1px #ec4f21;
+    }
+    .category__search--btn
+    {
+        right: 0;
+        height: 40px;
+        min-width: 44px;
+        font-size: 1.8rem;
+        background-color: #ec4f21;
+        color: var(--primary-color);
+        border: none;
+    }
+
+    /* TẠO LỚP MODAL KHI BẤM ICON   SEARCH*/
+        .name__input--search:checked ~ .overlay__search
+        {
+            display: block;
+        }
+        .name__input--search:checked ~.mobile-tablet-search--category
+        {
+            transform: translateX(0);
+        }
+        /* BẤM CART  */
+        .overlay__cart
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.3);
+            display: none;
+            animation: fadeInOverlay linear 0.2s;
+        }
+        .mobile-tablet-cart--category
+        {
+            position: fixed;
+            right: 0;
+             top: 0;
+            bottom: 0;
+            width: 340px;
+            max-width: 340px;
+            z-index: 3;
+            background-color: var(--primary-color);
+            padding: 18px 18px 0;
+            transform: translateX(100%);
+            transition: transform linear 0.5s;  
+        }
+        .cart--category__header
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cart--category__heading
+        {
+            font-size: 1.8rem;
+        }
+        .cart--category__body
+        {
+            margin-top: 15px;
+
+        }
+        .cart--category__body--des
+        {
+            font-size: 2rem;
+            text-align: center;
+            color:#ec4f21;
+        }
+        .btn__buy
+        {
+            text-align: center;
+        }
+        .cart--category__body--btn
+        {
+            height: 40px;
+            width: 180px;
+            background-color:#ec4f21;
+            color:var(--primary-color);
+            font-size: 1.6rem;
+            border: none;
+        }
+        /* TẠO MODAL KHI BẤM CART */
+        .name__input--cart:checked ~ .overlay__cart
+        {
+            display: block;
+        }
+        .name__input--cart:checked ~ .mobile-tablet-cart--category
+        {
+            transform: translateX(0);
+        }
+    /*   */
+    /* TẠO LỚP MODAL KHI BẤM ICON   BARS*/
+    .overlay
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.3);
+        z-index: 2;
+        display: none;
+        animation: fadeInOverlay linear 0.2s;
+    }
+    /* Tạo nav mobile */
+    .mobile-tablet__navigation
+    {
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 0;
+        width: 340px;
+        max-width: 340px;
+        background-color: var(--primary-color);
+        /* display: none; */
+        z-index: 3;
+        transform: translateX(-100%);
+        transition: transform linear 0.5s;
+    }
+    .mobile-tablet__navigation--times
+    {
+        position: absolute;
+        cursor: pointer;
+        right: 10px;
+        top:10px;
+    }
+    .mobile-tablet__navigation--times--btn
+    {
+        border: none;
+    }
+    .mobile-tablet__navigation--times--icon
+    {
+        font-size: 2rem;
+        color:#6e6c6c;
+    }
+    .mobile-tablet__navigation--list
+    {
+        padding-left: 0;
+        margin: 16px 12px 0 12px;
+        padding: 4px 0px 0 3px;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .item__wrap
+    {
+        display: flex;
+        align-items: center;
+    }
+    .mobile-tablet__navigation--item
+    {
+        list-style: none;
+        border-top: solid 1px #e8e8e8;
+        border-bottom: solid 1px #e8e8e8;
+        cursor: pointer;
+    }
+    .mobile-tablet__navigation--item :hover 
+    {
+        color: #ec4f21;
+    }
+    .mobile-tablet__navigation--item:first-child
+    {
+        border-top: none;
+    }
+    
+    .mobile-tablet__navigation--link
+    {
+        text-decoration:none;
+        display: block;
+        font-size: 16px;
+        color: var(--text-nav);
+        font-weight: 500;
+        padding: 15px 0;
+
+    }
+   
+    .item__double--icon
+    {
+        font-size: 1.4rem;
+        margin-right: 14px;
+        color: #b3acac;
+        margin-left: 203px;
+    }
+    .item__link--active
+    {
+        color: #ed6721;
+    }
+    .name__input:checked ~.overlay
+    {
+        display: block;
+    }
+    .name__input:checked ~ .mobile-tablet__navigation 
+    {
+        transform: translateX(0%);
+    }
+    .name__input:checked ~ .mobile-tablet__navigation--list
+    {
+        transform: translateX(0%);
+    }
+
+    /* Animation overlay */
+    @keyframes fadeInOverlay
+    {
+        from
+        {
+            opacity: 0;
+        }
+        to
+        {
+            opacity: 1;
+        }
+    }
+
+/* END RESPONSIVE HEADER */
+/* SLIDER */
+.slider__img
+{
+    cursor: pointer;
+}
+.slider__img--link
+{
+    width: 100%;
+    height: auto;
+
+}
+/* SECTION */
+/* SECTION : DANH MỤC SẢN PHẨM */
+.section__category
+{
+    margin-top: 45px;
+}
+.section__category--heading
+{
+    margin: 0;
+    text-align: center;
+    font-size: 2.8rem;
+    color:var(--text-nav);
+    font-weight: 600;
+}
+.section__category--description
+{
+    font-size: 2rem;
+    color:#222;
+    font-weight: 300;
+    text-align: center;
+}
+.home__category--item{
+    transition:  transform linear 0.2s;
+    padding: 10px 0;
+}
+.home__category--item:hover
+{
+    transform: translateY(-2px);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+.category__item--link
+{
+    text-decoration: none;
+    display: block;
+}
+ .category__item--link  :hover .home__category--item__title
+{
+    color: #ec4f21;
+}
+.home__category--img
+{
+        width: 100%;
+}
+.home__category--item__title
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    color:#222;
+    font-weight: 500;
+    bottom: 0;
+    margin-top: 10px;
+    /* right: 0; */
+}
+.section__category--active
+{
+    display: block;
+    font-size: 1.6rem;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+    display: none;
+}
+/* SECTION BANNER */
+.section__banner
+{
+    margin-top: 50px;
+}
+.section__banner--img
+{
+    width: 100%;
+    cursor: pointer;
+    height: auto;
+}
+.section__banner--link
+{
+    text-decoration: none;
+    display: block;
+}
+.section__banner--link :hover
+{
+    /* animation: fadeBanner linear 1s; */
+    transition: all 150ms ease-in-out;
+    
+}
+/* SECTION TOP SẢN PHẨM BÁN CHẠY */
+.section__product--top
+{
+    margin-top: 45px;
+}
+.section__product--top--container
+{
+    margin-top: 35px;
+}
+.section__product--top--title
+{
+    display: block;
+    text-align: center;
+    text-decoration:none;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #222;
+}
+.section__product--top--link
+{
+    text-decoration:none;
+}
+
+.section__product--top--item
+{
+   border: solid 1px #e8e8e8;
+}
+.section__product--top--item:hover
+{
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
+.section__product--top--item__img--link
+{
+   width: 100%;
+}
+.section__product--top--item__img--see
+{
+    display: flex;
+    padding: 4px 4px;
+    justify-content: left;
+}
+.active
+{
+    border: solid 1px #ec4f21;
+}
+.section__product--top--item__img--item
+{
+    width: 60px;
+    height: 60px;
+    margin-right: 4px;
+    padding: 4px 4px;
+}
+.section__product--top--item__img--item:hover
+{
+    border: solid 1px #ec4f21;
+}
+.section__product--top--item__infor
+{
+    text-decoration: none;
+    color:var(--text-nav);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.section__product--top--item__infor:hover
+{
+    color:#ec4f21;
+}
+.section__product--top--item__price
+{
+    text-decoration: none;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color:#ff631e;
+    text-align: center;
+    margin: 10px 0;
+    cursor: default;
+}
+.product__top--btn
+{
+    text-align: center;
+    margin: 28px 0;
+}
+.view__product--all
+{
+    height: 43px;
+    max-width: 116px;
+    width: 116px;
+    font-size: 1.6rem;
+    border: none;
+    color: #222;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    transition: background-color  0.5s,  color  0.5s  ease-in-out;
+}
+.view__product--all:hover
+{
+    background-color: #ec4f21;
+    color:var(--primary-color);
+}
+/* SECTION BRANDS */
+.section__brands
+{
+    margin-top: 60px;
+}
+/*SẢN PHẨM NHÀ XANH */
+.section__product--price
+{
+    display: flex;
+    /* align-items: flex-end; */
+    padding:0 10px;
+    margin: 30px 0 10px 0;
+}
+.section__product--item__price--new
+{
+    text-decoration: none;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color:var(--price-color);
+    text-align: center;
+    cursor: default;
+    cursor: default;
+}
+.section__product--top--item__price--cancel
+{
+    text-decoration: none;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color:var(--price-cancel);
+    font-weight: 300;
+    text-align: center;
+    cursor: default;
+    position: relative;
+    margin-left: 10px;
+}
+.section__product--top--item__price--cancel::before
+{
+    content: "";
+    position: absolute;
+    border-top:1px solid var(--price-cancel);
+    width: 100%;
+    top:50%;
+    transform: translateY(-50%);
+}
+.item__active
+{
+    position: relative;
+}
+.item__label
+{
+    position: absolute;
+    background-image: url("//bizweb.dktcdn.net/100/396/362/themes/777022/assets/evo_sales.png?1618493819009 ");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 49px;
+    height: 22px;
+    top:12px;
+    left: 12px;
+    color: var(--primary-color);
+    padding: 4px 2px 4px 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 13px;
+    cursor: default;
+}
+/* SECTION QUẢNG CÁO */
+.section__adv
+{
+    margin-top: 37px;
+}
+.section__adv--item
+{
+
+}
+
+.section__adv--img
+{
+    width: 100%;
+
+}
+.section__adv--img:hover
+{
+  opacity: 0.9; 
+  
+}
+/* SECTION CẨM NANG NỘI THẤT */
+.section__furniture
+{
+    margin-top: 45px;
+}
+.section__furniture--item :hover  .section__furniture--img__link
+{
+    transform: scale(1.2);
+}
+.section__furniture--heading
+{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    font-weight: 600;
+}
+.section__furniture--container
+{
+    margin-top: 25px;
+}
+.section__furniture--item--img
+{
+    overflow: hidden;
+}
+
+.section__furniture--img__link
+{
+    width: 100%;
+    height: auto;
+    transition: transform linear 0.4s;
+}
+.section__furniture--item__title
+{
+    display: block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--text-nav);
+    font-weight: 600;
+    margin: 10px 0;
+}
+.section__furniture--item__title:hover
+{
+    color:#ec4f21;
+}
+.section__furniture--item__date
+{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color:var(--text-description);
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.section__furniture--item__des
+{
+    font-size: 1.8rem;
+    color: var(--text-description);
+    margin: 0;
+    line-height: 2.4rem;
+}
+/* SECTION REGISTER */
+.section__resgister
+{
+    background-image: url("//bizweb.dktcdn.net/100/396/362/themes/777022/assets/feature_search_image_1.jpg?1618828531464");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin-top: 52px;
+    margin-bottom: 32px;
+    text-align: center;
+    padding-top: 42px;
+}
+
+   .section__resgister--heading
+   {
+       font-size: 2rem;
+       margin-top: 0;
+       margin-bottom: 12px;
+   }
+    .section__resgister--title
+    {
+        margin: 0;
+        font-size: 1.8rem;
+        color:#222;
+        font-weight: 300;
+    }
+   .section__resgister--wrap
+   {
+        margin-top: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+   .section__resgister--input
+   {
+        width: 430px;
+        height: 40px;
+        outline: none;
+        border:solid 1px #e9e9e9;
+        font-size: 1.6rem;
+        font-weight: 400;
+        padding-left:10px ;
+   }
+   .section__resgister--btn
+   {
+        height: 39px;
+        border:none;
+        max-width: 120px;
+       text-align: center;
+       padding: 0 33px;
+        background-color: #000;
+        color:var(--primary-color);
+        font-size: 1.6rem;
+   }
+   .section__resgister--btn:hover
+   {
+       background-color: #ec4f21;
+   }
+   /* FOOTER */
+   .app__footer
+   {
+       margin-bottom: 40px;
+   }
+   .footer__item
+   {
+        margin-bottom: 20px;
+   }
+   .footer__item--heading
+   {
+       font-size: 1.8rem;
+       color:#222;
+       font-weight: 500;
+       margin: 0 0 10px 0;
+   }
+   .footer__item--address
+   {
+       
+       font-size: 1.4rem;
+       margin: 0;
+   }
+   .footer__item--address--item
+   {
+       font-size: 1.4rem;
+       margin: 0;
+       line-height: 2.2rem;
+   }
+   .footer__item--number,
+   .footer__item--email
+   {
+       font-size: 1.4rem;
+   }
+   .footer__item--number--link
+   {
+       text-decoration: none;
+       color:#222;
+       font-size: 1.6rem;
+   }
+   .footer__item--img
+   {
+       width: 180px;
+       height: 40px;
+   }
+
+   .footer__list
+   {
+    padding-left: 10px;
+   }
+   .footer__list--item
+   {
+
+   }
+   .footer__list--item--link    
+   {
+       padding: 8px 0;
+        display: block;
+        text-decoration: none;
+        color:var(--text-nav);
+        font-size: 1.6rem;
+   }
+   .social
+   {
+       margin-top: 15px;
+       margin-bottom: 15px;
+        display: flex;
+   }
+   .social__icon
+   {
+        font-size: 2.4rem;
+        margin-right: 10px;
+   }
+   .paycheck
+   {
+       display: flex;
+       flex-wrap: wrap;
+   }
+   .paycheck__img
+   {
+       margin-right: 10px;
+       margin-top: 10px;
+   }
+/* KEYFRAME PRODUCT */
+@keyframes fadeIn
+{
+    from
+    {
+        top:110%;
+        opacity: 0;
+    }
+    to
+    {
+        top: 100%;
+        opacity: 100%;
+    }
+}
+
+}

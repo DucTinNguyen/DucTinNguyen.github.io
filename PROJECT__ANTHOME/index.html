@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/icon/fontawesome-free-5.15.3-web/css/all.min.css">
+    <title>Ant Home</title>
+</head>
+<body>
+    <!-- STRUCTURE
+        APP
+            HEADER
+                +HEADER SEARCH
+                +HEADER NAVBAR
+            SLIDER
+            SECTION
+                +SECTION CATEGORY
+                +SECTION TOP
+                +SECTION BRAND
+                +SECTION HOUSE GREEN
+                +SECTION FUNITURE
+            FOOTER
+    -->
+    <div class="app">
+        <!-- HOME PAGE -->
+        <header class="header">
+                <div class="grid wide">
+                    <!-- HEADER SEARCH -->
+                    <div class="header-with-search">
+                        <!-- THÊM ICON BARS Ở TABLET VÀ MOBILE -->
+                        <!-- Xây dụng sự kiện overlay -->
+                            <!-- 
+                                Cái cần bấm(label)
+                                tạo input check
+                                tạo overlay
+                                *Cái cần hiện
+                             -->
+                                <!-- 1 Cái cần bấm: icon bars -->
+                            <label for="mobile-tablet-bars" class="header__mobile-tablet--bars">
+                                <i class="header__mobile-tablet--bars--icon fas fa-bars"></i>
+                            </label>
+                            <!-- 2. Input type checkbox -->
+                           <input type="checkbox" name="" id="mobile-tablet-bars" hidden class="name__input">
+                           <!-- 3.Tạo lớp over lay -->
+                           <label for="mobile-tablet-bars" class="overlay"></label>
+                           <!-- 4.Tạo cái cần xuất hiện -->
+                           <nav class="mobile-tablet__navigation">
+                               <label for="mobile-tablet-bars" class="mobile-tablet__navigation--times">
+                                    <i class="mobile-tablet__navigation--times--icon fas fa-times"></i>
+                               </label>
+                               <ul class="mobile-tablet__navigation--list">
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link item__link--active">TRANG CHỦ</a></li>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">GIỚI THIỆU</a></li>
+                                    <li class="mobile-tablet__navigation--item ">
+                                        <div class="item__wrap">
+                                            <a href="#" class="mobile-tablet__navigation--link">
+                                                SẢN PHẨM 
+                                                <i class="item__double--icon fas fa-plus"></i>
+                                            </a>    
+                                        </div>
+                                     </li>
+                                   </a>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">DEAL HOT</a></li>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">THƯƠNG HIỆU NỔI BẬT</a></li>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">TIN TỨC</a></li>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">LIÊN HỆ</a></li>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">FAQ</a></li>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">ĐĂNG NHẬP</a></li>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">DĂNG KÝ</a></li>
+                                   <li class="mobile-tablet__navigation--item"><a href="#" class="mobile-tablet__navigation--link">SẢN PHẨM YÊU THÍCH(0)</a></li>
+
+                               </ul>
+                               
+                           </nav>
+                        <div class="header__logo">
+                            <a href="" class="header__logo--link">
+                                <img src="./assets/img/logo.png" alt="Anthome" class="header__logo--img">
+                            </a>
+                        </div>
+    
+                        <div class="header__search hide-on-table-mobile">
+                            <input type="text" class="header__search--input" placeholder="Tìm sản phẩm ...">
+                            <button class="header__search--btn">
+                                <i class="header__search--icon  fas fa-search"></i>
+                            </button>
+                        </div>
+                                <!-- THÊM ICON SEARCH BÊN TABLET VÀ MOBILE -->
+                            <div class="wrap__search--cart">
+                                <!-- 1.Thằng cần bấm -->
+                                <label for="mobile-tablet-search" class="header__mobile-tablet--search">
+                                    <i class="header__mobile-tablet--search--icon fas fa-search"></i>
+                                </label>
+                                <!-- Tạo input type check -->
+                                <input type="checkbox" hidden name="" id="mobile-tablet-search" class="name__input--search">
+                                <!-- Tạo over lay -->
+                                <label for="mobile-tablet-search" class="overlay__search"></label>
+                                <!-- 4.Tạo cái xuất hiện -->
+                                <div class="mobile-tablet-search--category">
+                                    <div class="search--category__header">
+                                        <h3 class="search--category__header--heading">  TÌM KIẾM SẢN PHẨM</h3>   
+                                        <label for="mobile-tablet-search" class="category--times">
+                                            <i class="category--times--icon fas fa-times"></i>
+                                        </label>
+                                    </div>
+                                    <div class="search--category__body">
+                                        <input type="text" class="category__search" placeholder="Tìm sản phẩm...">
+                                        <button class="category__search--btn"><i class="category__search--btn--icon fas fa-search"></i></button>
+                                    </div>
+                                    
+                                </div>
+                                <!-- Thằng cần bấm -->
+                                <label for="mobile-tablet-cart" class="header__mobile-tablet--cart">
+                                    <i class="header__mobile-tablet--cart--icon fas fa-shopping-cart"></i>
+                                    <div class="mobile-tablet--cart--icon__number">0</div>
+                                </label>
+                                <!-- tạo input check -->
+                                <input type="checkbox" hidden name="" id="mobile-tablet-cart" class="name__input--cart">
+                                <!-- Tạo overlay -->
+                                <label for="mobile-tablet-cart" class="overlay__cart"></label>
+                                <!-- Tạo thằng cần xuất hiện -->
+                                <div class="mobile-tablet-cart--category">
+                                    <div class="cart--category__header">
+                                        <h3 class="cart--category__heading">GIỎ HÀNG</h3>
+                                        <label for="mobile-tablet-cart" class="category--times">
+                                            <i class="cart--times--icon fas fa-times"></i>
+                                        </label>
+                                    </div>
+                                    <div class="cart--category__body">
+                                        <h3 class="cart--category__body--des">KHÔNG CÓ SẢN PHẨM</h3>
+                                        <div class="btn__buy">
+                                            <button class="cart--category__body--btn">Tiếp tục mua hàng</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        <div class="header__fill  hide-on-table-mobile">
+                            <ul class="header__fill--list">
+                                <a href="#" class="header__fill--link favorite ">
+                                     <li class="header__fill--item">
+                                        <i class="header__fill--icon far fa-heart"></i>
+                                        <span class="header__fill--title">Yêu thích</span>
+                                    </li>
+                               <span class=" favorite--notice">0</span>
+                                </a>
+                                <a href="#" class="header__fill--link ">
+                                    <li class="header__fill--item">
+                                        <i class="header__fill--icon far fa-user"></i>
+                                        <span class="header__fill--title">Tài khoản</span>
+                                    </li>
+                                </a>
+                                <a href="#" class="header__fill--link cart  ">
+                                     <li class="header__fill--item"></li>
+                                        <i class="header__fill--icon  fas fa-shopping-cart"></i>
+                                        <span class="header__fill--title hide-on-table-mobile">Giỏ hàng</span>
+                                    </li>
+                               <span class=" cart--notice">0</span>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                <!-- HEADER NAVGATION -->
+                    <nav class="header__nav hide-on-table-mobile">
+                        <ul class="header__nav--list">
+                            <li class="header__nav--item header__nav--item--active">
+                            <a href="" class="header__nav--item-link">Trang chủ</a>
+                            </li>
+                            <li class="header__nav--item">
+                            <a href="" class="header__nav--item-link">Giới thiệu</a>
+                            </li>
+                            <li class="header__nav--item header__nav--item--category ">
+                            <a href="" class="header__nav--item-link">
+                                Sản phẩm
+                                <i class=" header__nav--list-icon fas fa-arrow-down"></i>
+                            </a>
+                            <!-- PRODUCT -->
+                            <div class="product">
+                                <div class="grid wide">
+                                        <div class="row container ">
+                                            <div class="col l-8 container__category ">
+                                                <div class="row">
+                                                    <div class="col l-3">
+                                                        <div class="produc__item">
+                                                            <div class="product__item--heading">Nội thất</div>
+                                                            <ul class="produc__item--list">
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Phòng khách</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Phòng ăn </a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Phòng ngủ</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Phòng làm việc</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Phòng cho bé</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Nội thất thông minh</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-3">
+                                                        <div class="produc__item">
+                                                            <div class="product__item--heading">Đồ trang trí</div>
+                                                            <ul class="produc__item--list">
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Tranh và khung ảnh</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Lọ và bình trang trí </a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Đồng hồ</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Nến thơm và đèn tinh dầu</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Đồ dùng uống trà và cà phê</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-3">
+                                                        <div class="produc__item">
+                                                            <div class="product__item--heading">Đèn</div>
+                                                            <ul class="produc__item--list">
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Đèn bàn</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Đèn sàn </a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Đèn trần</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Đèn treo tường</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-3">
+                                                        <div class="produc__item">
+                                                            <div class="product__item--heading">Ngoại thất</div>
+                                                            <ul class="produc__item--list">
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Trang trí ngoài trời</a></li>
+                                                                <li class="produc__item--list--item"><a href="#" class="produc__item--link">Trang trí sân vườn</a></li>   
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-3">
+                                                        <div class="produc__item">
+                                                            <div class="product__item--heading">Chăn,da gối và nệm</div>                                                           
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-3">
+                                                        <div class="produc__item">
+                                                            <div class="product__item--heading">Đồ dùng nhà tắm</div>                                                                 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4">
+                                                <div class="row">
+                                                    <div class="col l-12 product__item--img"> 
+                                                            <img src="./assets/img/img_productcategory.jpg" alt="sản phẩm" class="product__img--link" title="Sản phẩm">
+                                                    </div>
+                                                </div>                                               
+                                            </div>
+                                        </div>                                                                 
+                                </div>
+                            </div>
+                            </li>
+                            <li class="header__nav--item">
+                            <a href="" class="header__nav--item-link">Deal Hot</a>
+                            </li>
+                            <li class="header__nav--item">
+                            <a href="" class="header__nav--item-link">Thương hiệu nổi bật</a>
+                            </li>
+                            <li class="header__nav--item">
+                            <a href="" class="header__nav--item-link">Tin tức</a>
+                            </li>
+                            <li class="header__nav--item">
+                            <a href="" class="header__nav--item-link">Liên hệ</a>
+                            </li>
+                            <li class="header__nav--item">
+                            <a href="" class="header__nav--item-link">FAQ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+        </header>
+        <div class="slider" title="Ant Home">
+            <div class="slider__img">
+                <img src="./assets/img/slider_1.jpg" alt="Slider" class="slider__img--link">
+            </div>
+        </div>
+        <div class="section">
+            <div class="grid wide">
+                <!-- DANH  MỤC SẢN PHẨM -->
+                <div class="section__category">
+                    <h3 class="section__category--heading">DANH MỤC SẢN PHẨM</h3>
+                    <p class="section__category--description">
+                        Ant Home là giải pháp thương mại điện tử hiện đại và chuyên biệt trong lĩnh vực bán lẻ nội thất, đồ trang trí và điện gia dụng trong gia đình, định vị trở thành một 
+                        giải pháp tiên phong trong định hình phong cách sống hiện đại cho các gia chủ tại Việt Nam và khu vực Đông Nam Á qua sự kết hợp của những thương hiệu nội thất 
+                        hàng đầu với đa dạng phong cách và trải nghiệm mua sắm xuyên suốt, trực quan thông qua việc tích hợp các ứng dụng 3D visualization, Home Styler, AR và các giải pháp tài chính.
+                    </p>
+                    <div class="home__category--product">
+                        <div class="row  container__father">
+                            <!-- Sản phâm 1 -->
+                                <div class="col l-2 m-3 c-4  ">
+                                    <a href="#" class="category__item--link">
+                                        <div class="home__category--item">
+                                            <img src="./assets/img/ghe.jpg" alt="sản phẩm" title="Nội thất" class="home__category--img">
+                                            <p class="home__category--item__title">Nội thất</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            <!-- Sản phẩm 2 -->
+                            <div class="col l-2 m-3 c-4 ">
+                                <a href="#" class="category__item--link">
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/giuong.jpg" alt="Chăn ,da ,gối & nệm" title="Chăn ,da ,gối & nệm" class="home__category--img">
+                                        <p class="home__category--item__title">Chăn ,da ,gối và nệm</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Sản phẩm 3 -->
+                            <div class="col l-2 m-3 c-4 ">
+                                <a href="#" class="category__item--link">
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/lo-trang-tri.jpg" alt="lọ bình trang trí" title="lọ bình trang trí" class="home__category--img">
+                                        <p class="home__category--item__title">Lọ ,bình trang trí</p>
+                                    </div>
+                                </a>
+                                </div>
+                            <!-- Sản phẩm 4  -->
+                            <div class="col l-2 m-3 c-4 ">
+                                <a href="#" class="category__item--link">
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/3-ke.jpg" alt="Đồ trang trí" title="Đồ trang trí" class="home__category--img">
+                                        <p class="home__category--item__title">Đồ trang trí</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Sản phẩm 5 -->
+                            <div class="col l-2 m-3 c-4 ">                               
+                                <a href="#" class="category__item--link">
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/8-den.jpg" alt="Đèn" title="Đèn" class="home__category--img">
+                                        <p class="home__category--item__title">Đèn</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Sẩn phẩm 6 -->
+                            <div class="col l-2 m-3 c-4 ">                               
+                                <a href="#" class="category__item--link">
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/5-sofajpg.jpg" alt="Phòng khách" title="Phòng khách" class="home__category--img">
+                                        <p class="home__category--item__title">Phòng khách</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Sản phẩm thứ 7 -->
+                            <div class="col l-2 m-3 c-4 ">                             
+                                <a href="#" class="category__item--link">
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/4-tu.jpg" alt="Đồ dùng chứa và lưu trữ" title="Đồ dùng chứa và lưu trữ" class="home__category--img">
+                                        <p class="home__category--item__title">Đồ dùng chứa và lưu trữ</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col l-2  m-3 c-4 ">
+                                <a href="#" class="category__item--link">
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/7-kitchen.jpg" alt="sản phẩm" title="Đồ gia dụng" class="home__category--img">
+                                        <p class="home__category--item__title">Đồ gia dụng</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2 m-3 c-4 ">
+                                <a href="#" class="category__item--link">
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/10-guong.jpg" alt="sản phẩm" title="Đồ dùng nhà tắm" class="home__category--img">
+                                        <p class="home__category--item__title">Đồ dùng nhà tắm</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2 m-3 c-4 ">
+                                <a href="#" class="category__item--link">                                    
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/1-ban.jpg" alt="sản phẩm" title="Bàn trang trí" class="home__category--img">
+                                        <p class="home__category--item__title">Bàn trang trí</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2 m-3 c-4  ">
+                                <a href="#" class="category__item--link">                    
+                                    <div class="home__category--item">
+                                        <div class="item__img--link">
+                                            <img src="./assets/img/11-thungrac.jpg" alt="sản phẩm" title="Thùng rác" class="home__category--img">
+                                        </div>
+                                        <p class="home__category--item__title">Thùng rác</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-2 m-3 c-4 ">
+                                <a href="#" class="category__item--link">                                  
+                                    <div class="home__category--item">
+                                        <img src="./assets/img/12-bosanpham.jpg" alt="sản phẩm" title="Bộ sản phẩm" class="home__category--img">
+                                        <p class="home__category--item__title">Bộ sản phẩm</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="section__category--active">Danh sách sản phẩm nổi bật</p>
+                </div>
+                <!-- SECTION BANNER -->
+                <div class="section__banner">
+                    <a href="#" class="section__banner--link">
+                        <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/feature_banner.jpg?1618828531464" alt="Banner" title="Anthome"class="section__banner--img">
+                    </a>
+                </div>
+                <!-- TOP SẢN PHẨM BÁN CHẠY -->
+                <div class="section__product--top">
+                    <a href="#" class="section__product--top--title">TOP SẢN PHẨM BÁN CHẠY</a>
+                    <div class="section__product--top--container">
+                        <div class="row sm-gutter container__father">
+                            <div class="col sm-gutter l-3 m-4 c-6 ">
+                                <a href="#" class="section__product--top--link">
+                                    <div class="section__product--top--item">
+                                        <div class="section__product--top--item__img" title="Bộ 2 Bàn Sofa IGEA Việt Nam Phong Cách Scanvadian Màu Trắng"  >
+                                            <img src="./assets/img/bobanghe.jpg" alt="" class="section__product--top--item__img--link">
+                                        </div>
+                                        <div class="section__product--top--item__img--see">
+                                            <img src="./assets/img/bobanghe2.jpg" alt="" class="section__product--top--item__img--item active">
+                                            <img src="./assets/img/bobanghe3.jpg" alt="" class="section__product--top--item__img--item">
+                                        </div>
+                                        <a href="#" class="section__product--top--item__infor">Bộ 2 Bàn Sofa IGEA Việt Nam Phong Cách Scanvadian Màu Trắng</a>
+                                        <a href="#" class="section__product--top--item__price">569.000đ </a>
+                                    </div>
+                                </a>                              
+                            </div>
+
+                            <div class="col sm-gutter l-3 m-4 c-6">
+                                <a href="#" class="section__product--top--link">
+                                    <div class="section__product--top--item">
+                                        <div class="section__product--top--item__img" title="Bộ Bàn Ghế Làm Việc Make My Home Simple 1" >
+                                            <img src="./assets/img/banghelv.jpg" alt="" class="section__product--top--item__img--link">
+                                        </div>
+                                        <div class="section__product--top--item__img--see">
+                                            <img src="./assets/img/banghelv.jpg" alt="" class="section__product--top--item__img--item active">
+                                            <img src="./assets/img/ghelv.jpg" alt="" class="section__product--top--item__img--item">
+                                            <img src="./assets/img/denlv.jpg" alt="" class="section__product--top--item__img--item">
+                                        </div>
+                                        <a href="#" class="section__product--top--item__infor">Bộ Bàn Ghế Làm Việc Make My Home Simple 1</a>
+                                        <a href="#" class="section__product--top--item__price">2.468.000đ </a>
+                                    </div>
+                                </a>                              
+                            </div>
+
+                            <div class="col sm-gutter l-3 m-4 c-6">
+                                <a href="#" class="section__product--top--link">
+                                    <div class="section__product--top--item">
+                                        <div class="section__product--top--item__img" title="Bộ Bàn Ăn Han's Furniture Viva B2C - Màu Nâu" >
+                                            <img src="./assets/img/bobanan.jpg" alt="" class="section__product--top--item__img--link">                                          
+                                        </div>
+                                        <div class="section__product--top--item__img--see">
+                                            <img src="./assets/img/bobanan.jpg" alt="" class="section__product--top--item__img--item active">
+                                            <img src="./assets/img/bobanan2.jpg" alt="" class="section__product--top--item__img--item">
+                                        </div>
+                                        <a href="#" class="section__product--top--item__infor">Bộ Bàn Ăn Han's Furniture Viva B2C - Màu Nâu</a>
+                                        <a href="#" class="section__product--top--item__price">3.990.000đ </a>
+                                    </div>
+                                </a>                              
+                            </div>
+
+                            <div class="col sm-gutter l-3 m-4 c-6">
+                                <a href="#" class="section__product--top--link">
+                                    <div class="section__product--top--item">
+                                        <div class="section__product--top--item__img"  title="Bộ Bàn Ăn 4 Ghế IBIE Sarah Màu Trắng Mặt Veneer Gỗ Tự Nhiên" >
+                                            <img src="./assets/img/ib-1591929276-1.jpg" alt="" class="section__product--top--item__img--link">
+                                        </div>
+                                        <div class="section__product--top--item__img--see">
+                                            <img src="./assets/img/ib-1591929276-1.jpg" alt="" class="section__product--top--item__img--item active">
+                                            <img src="./assets/img/ib2.jpg" alt="" class="section__product--top--item__img--item">
+                                        </div>
+                                        <a href="#" class="section__product--top--item__infor">Bộ Bàn Ăn 4 Ghế IBIE Sarah Màu Trắng Mặt Veneer Gỗ Tự Nhiên</a>
+                                        <a href="#" class="section__product--top--item__price">2.468.000đ </a>
+                                    </div>
+                                </a>                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__top--btn">
+                        <button class="view__product--all">Xem tất cả</button>
+                    </div>
+                </div>
+                <!-- SECTION BRAND -->
+                <div class="section__brands">
+                    <div class="row sm-gutter container__father">
+                        <div class="col sm-gutter l-2 m-3 c-4 ">
+                            <a href="#" class="section__brands--link">
+                                <img src="./assets/img/partner_1.jpg" alt="Brands" class="section__brands--img">
+                            </a>
+                        </div>
+                        <div class="col sm-gutter l-2 m-3 c-4 ">
+                            <a href="#" class="section__brands--link">
+                                <img src="./assets/img/partner_2.jpg" alt="Brands" class="section__brands--img">
+                            </a>
+                        </div>
+                        <div class="col sm-gutter l-2 m-3 c-4 ">
+                            <a href="#" class="section__brands--link">
+                                <img src="./assets/img/partner_3.jpg" alt="Brands" class="section__brands--img">
+                            </a>
+                        </div>
+                        <div class="col sm-gutter l-2 m-3 c-4 ">
+                            <a href="#" class="section__brands--link">
+                                <img src="./assets/img/partner_4.jpg" alt="Brands" class="section__brands--img">
+                            </a>
+                        </div>
+                        <div class="col sm-gutter l-2 m-3 c-4 ">
+                            <a href="#" class="section__brands--link">
+                                <img src="./assets/img/partner_5.jpg" alt="Brands" class="section__brands--img">
+                            </a>
+                        </div>
+                        <div class="col sm-gutter l-2 m-3 c-4 ">
+                            <a href="#" class="section__brands--link">
+                                <img src="./assets/img/partner_6.jpg" alt="Brands" class="section__brands--img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- SẢN PHẨM NHÀ XANH -->
+                <div class="section__product--top">
+                    <a href="#" class="section__product--top--title">SẢN PHẨM NHÀ XANH</a>
+                    <div class="section__product--top--container">
+                        <div class="row sm-gutter container__father">
+                            <div class="col sm-gutter l-3 m-4 c-6">
+                                <a href="#" class="section__product--top--link">
+                                    <div class="section__product--top--item item__active">
+                                        <div class="section__product--top--item__img"  title="Bàn Trang Điểm Cao Cấp OHAHA-002" >
+                                            <img src="./assets/img/BANTRANGDIEM1.jpg" alt="" class="section__product--top--item__img--link">
+                                        </div>
+                                        <div class="section__product--top--item__img--see">
+                                            <img src="./assets/img/BANTRANGDIEM1.jpg" alt="" class="section__product--top--item__img--item active">
+                                            <img src="./assets/img/bantrangdiem2.jpg" alt="" class="section__product--top--item__img--item">
+                                            <img src="./assets/img/bantrangdiem3.jpg" alt="" class="section__product--top--item__img--item">
+                                        </div>
+                                        <a href="#" class="section__product--top--item__infor">Bàn Trang Điểm Cao Cấp OHAHA-002</a>
+                                        <div class="section__product--price">
+                                           <a href="#" class="section__product--item__price--new">4.000.000đ</a>
+                                           <a href="#" class="section__product--top--item__price--cancel">8.500.000đ</a>
+                                        </div>
+                                        <span class="item__label">53%</span>
+                                    </div>
+                                </a>                              
+                            </div>
+                            <div class="col sm-gutter l-3 m-4 c-6">
+                                <a href="#" class="section__product--top--link">
+                                    <div class="section__product--top--item">
+                                        <div class="section__product--top--item__img"  title="Kệ Trang Trí Furnist Leto 4 Tầng - Ván Màu Bất Kỳ" >
+                                            <img src="./assets/img/kett1.jpg" alt="" class="section__product--top--item__img--link">
+                                        </div>
+                                        <div class="section__product--top--item__img--see">
+                                            <img src="./assets/img/kett1.jpg" alt="" class="section__product--top--item__img--item active">
+                                            <img src="./assets/img/kett2.jpg" alt="" class="section__product--top--item__img--item">
+                                        </div>
+                                        <a href="#" class="section__product--top--item__infor">Kệ Trang Trí Furnist Leto 4 Tầng - Ván Màu Bất Kỳ</a>
+                                        <a href="#" class="section__product--top--item__price">1.160.000đ </a>
+                                    </div>
+                                </a>                              
+                            </div>
+                            <div class="col sm-gutter l-3 m-4 c-6">
+                                <a href="#" class="section__product--top--link">
+                                    <div class="section__product--top--item">
+                                        <div class="section__product--top--item__img"  title="Trang Trí Tường Tick & Pick Set Everboards Bảng Gỗ Nam Châm Đa Năng" >
+                                            <img src="./assets/img/trang trí tường.jpg" alt="" class="section__product--top--item__img--link">
+                                        </div>
+                                        <div class="section__product--top--item__img--see">
+                                            <img src="./assets/img/trang trí tường.jpg" alt="" class="section__product--top--item__img--item active">
+                                            <img src="./assets/img/ttt2.jpg" alt="" class="section__product--top--item__img--item">
+                                        </div>
+                                        <a href="#" class="section__product--top--item__infor">Trang Trí Tường Tick & Pick Set Everboards Bảng Gỗ Nam Châm Đa Năng</a>
+                                        <a href="#" class="section__product--top--item__price">1.399.000đ </a>
+                                    </div>
+                                </a>                              
+                            </div>
+                            <div class="col sm-gutter l-3 m-4 c-6">
+                                <a href="#" class="section__product--top--link">
+                                    <div class="section__product--top--item">
+                                        <div class="section__product--top--item__img"  title="Thang Trang Trí BEYOURs C Đen" >
+                                            <img src="./assets/img/thang-trang-tri.jpg" alt="" class="section__product--top--item__img--link">
+                                        </div>
+                                        <div class="section__product--top--item__img--see">
+                                            <img src="./assets/img/thang-trang-tri.jpg" alt="" class="section__product--top--item__img--item active">
+                                            <img src="./assets/img/thang-trang-tri-2.jpg" alt="" class="section__product--top--item__img--item">
+                                            <img src="./assets/img/thang-trang-tri-3.jpg" alt="" class="section__product--top--item__img--item">
+                                        </div>
+                                        <a href="#" class="section__product--top--item__infor">Thang Trang Trí BEYOURs C Đen</a>
+                                        <a href="#" class="section__product--top--item__price">589.000đ </a>
+                                    </div>
+                                </a>                              
+                            </div>
+                    </div>
+                    <div class="product__top--btn">
+                        <button class="view__product--all">Xem tất cả</button>
+                    </div>
+                </div>
+                <!-- QUẢNG CÁO -->
+                <div class="section__adv">
+                    <div class="row">
+                        <div class="col l-4 m-4 c-12 ">
+                            <a href="#" class="section__adv--link" title="AnthHome">
+                                <div class="section__adv--item">
+                                    <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/feature_banner_1.jpg?1618828531464" alt="" class="section__adv--img">
+                                    <div class="section__adv--item--con"></div>
+                                 </div>
+                            </a>
+                        </div>
+                        <div class="col l-4 m-4 c-12 ">
+                            <a href="#" class="section__adv--link" title="AnthHome">
+                                <div class="section__adv--item">
+                                    <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/feature_banner_2.jpg?1618828531464" alt="" class="section__adv--img">
+                                 </div>
+                            </a>
+                        </div>
+                        <div class="col l-4 m-4 c-12 ">
+                            <a href="#" class="section__adv--link" title="AnthHome">
+                                <div class="section__adv--item">
+                                    <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/feature_banner_2.jpg?1618828531464" alt="" class="section__adv--img">
+                                 </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- CẨM NANG NỘI THẤT -->
+                <div class="section__furniture">
+                    <a href="#" class="section__furniture--heading">CẨM NANG NỘI THẤT</a>
+                    <div class="section__furniture--container">
+                        <div class="row container__father">
+                           <div class="col l-4 m-4 c-11">
+                               <a href="#" class="section__furniture--item__link">
+                                   <div class="section__furniture--item">
+                                       <div class="section__furniture--item--img" title="Nhà phố hai mái giúp gia chủ không cần điều hòa">
+                                           <img src="./assets/img/bl-1.jpg" alt="" class="section__furniture--img__link">
+                                       </div>
+                                       <a href="#" class="section__furniture--item__title">Nhà phố hai mái giúp gia chủ không cần điều hòa</a>
+                                       <p class="section__furniture--item__date">20/7/2020-Kiến Vàng</p>
+                                       <p class="section__furniture--item__des">
+                                        Căn nhà trên mảnh đất 68 m2 ở quận 9 của một gia đình ba người. Để ngôi nhà thông gió và ít cần sử dụng điều hòa, ki...
+                                       </p>
+                                   </div>
+                               </a>
+                           </div>
+                           <div class="col l-4 m-4 c-11">
+                            <a href="#" class="section__furniture--item__link">
+                                <div class="section__furniture--item">
+                                    <div class="section__furniture--item--img" title="Ngôi nhà ngoài đen,trong trắng">
+                                        <img src="./assets/img/black-and-white-1.jpg" alt="" class="section__furniture--img__link">
+                                    </div>
+                                    <a href="#" class="section__furniture--item__title">Ngôi nhà ngoài đen,trong trắng</a>
+                                    <p class="section__furniture--item__date">20/7/2020-Kiến Vàng</p>
+                                    <p class="section__furniture--item__des">
+                                        Ngôi nhà 30 năm tuổi ở Melbourne được chủ nhân yêu cầu cải tạo sao cho "không có cảm giác bừa bộn của cuộc sống gia ...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-4 m-4 c-11">
+                            <a href="#" class="section__furniture--item__link">
+                                <div class="section__furniture--item">
+                                    <div class="section__furniture--item--img" title="Nhà phố hai mái giúp gia chủ không cần điều hòa">
+                                        <img src="./assets/img/bl-2.jpg" alt="" class="section__furniture--img__link">
+                                    </div>
+                                    <a href="#" class="section__furniture--item__title">Những ngôi nhà Việt lọt top 50 công trình đẹp nhất</a>
+                                    <p class="section__furniture--item__date">20/7/2020-Kiến Vàng</p>
+                                    <p class="section__furniture--item__des">
+                                        Tạp chí kiến trúc Archdaily có nhiều người truy cập nhất thế giới, vừa chọn ra 50 ngôi nhà của năm dựa trên tiêu chí...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__resgister">
+                        <h3 class="section__resgister--heading">ĐĂNG KÍ NHẬN TIN TỪ ANTHOME</h3>
+                        <p class="section__resgister--title">Đăng kí nhận bản tin khuyến mãi.Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình hấp dẫn</p>
+                        <div class="section__resgister--wrap">
+                            <input type="text" class="section__resgister--input"placeholder="Email của bạn">
+                            <button class="section__resgister--btn">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="grid wide ">
+                <div class="row  app__footer">
+                        <div class="col l-3 m-6 c-6">
+                                <div class="footer__item">
+                                    <h3 class="footer__item--heading">LIÊN HỆ VỚI ANTHOME</h3>
+                                    <p class="footer__item--address">
+                                        <strong>Địa chỉ:</strong>
+                                        <p class="footer__item--address--item">175 Lý Thường Kiệt, Phường 6, Quận Tân Bình, TP Hồ Chí Minh</p>
+                                    </p>
+                                    <p class="footer__item--number">
+                                        <strong>Điện thoại:</strong>
+                                        <a href="#" class="footer__item--number--link">0222456789</a>
+                                    </p>
+                                    <p class="footer__item--email">
+                                        <strong>Email:</strong>
+                                        <a href="#" class="footer__item--number--link"> baotrung304@gmail.com</a>
+                                    </p>
+                                    <img src="./assets/img/logo.png" alt="" class="footer__item--img">
+                                </div>
+                        </div>
+                        <div class="col l-3 m-6 c-6">
+                            <div class="footer__item">
+                                <h3 class="footer__item--heading">VỀ CHÚNG TÔI</h3>
+                                <ul class="footer__list">
+                                    <li class="footer__list--item"><a href="#" class="footer__list--item--link">Giới thiệu</a></li>
+                                    <li class="footer__list--item"><a href="#" class="footer__list--item--link">Chính sách bảo mật và thanh toán</a></li>
+                                    <li class="footer__list--item"><a href="#" class="footer__list--item--link">Bảo mật thông tin cá nhân</a></li>
+                                    <li class="footer__list--item"><a href="#" class="footer__list--item--link">Quy chế hoạt động</a></li>
+                                    <li class="footer__list--item"><a href="#" class="footer__list--item--link">Bán hàng cùng Ant Home</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-6">
+                            <div class="footer__item">
+                                <h3 class="footer__item--heading">HỖ TRỢ KHÁCH HÀNG</h3>
+                            <ul class="footer__list">
+                                <li class="footer__list--item"><a href="#" class="footer__list--item--link">Hướng dẫn đặt hàng</a></li>
+                                <li class="footer__list--item"><a href="#" class="footer__list--item--link">Quy trình giao hàng và thanh toán</a></li>
+                                <li class="footer__list--item"><a href="#" class="footer__list--item--link">Quy trình đổi trả và bảo hành</a></li>
+                                <li class="footer__list--item"><a href="#" class="footer__list--item--link">Chính sách giải quyết khiếu nại</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col l-3 m-6 c-6">
+                            <div class="footer__item">
+                                <h3 class="footer__item--heading"> KẾT NỐI VỚI CHÚNG TÔI</h3>
+                                <div class="social">
+                                    <i class="social__icon fab fa-facebook-f"></i>
+                                    <i class="social__icon fab fa-twitter"></i>
+                                    <i class="social__icon fab fa-youtube"></i>
+                                    <i class="social__icon fab fa-instagram"></i>
+                                </div>
+                                <h3 class="footer__item--heading">PHƯƠNG THỨC THANH TOÁN</h3>
+                                <div class="paycheck">
+                                    <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/payment_1.svg?1618828531464" alt="" class="paycheck__img">
+                                   <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/payment_2.svg?1618828531464" alt="" class="paycheck__img">
+                                   <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/payment_3.svg?1618828531464" alt="" class="paycheck__img">
+                                   <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/payment_4.svg?1618828531464" alt="" class="paycheck__img">
+                                   <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/payment_5.svg?1618828531464" alt="" class="paycheck__img">
+                                   <img src="//bizweb.dktcdn.net/100/396/362/themes/777022/assets/payment_6.svg?1618828531464" alt="" class="paycheck__img">
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

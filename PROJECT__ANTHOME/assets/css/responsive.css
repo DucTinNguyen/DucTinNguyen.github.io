@@ -1,0 +1,240 @@
+/* Tablet và Mobile */
+@media(max-width:1023px)
+{
+    ::-webkit-scrollbar
+    {
+        height: 100%;
+        width: 10px;
+        background: #F5F5F5;
+        overflow-y: scroll;
+    }
+    .hide-on-table-mobile
+    {
+        display: none;
+    }
+    .header__mobile-tablet--bars
+    {
+        display: block;
+    }
+    .header__mobile-tablet--search
+    {
+        display: block;
+    }
+    .header__mobile-tablet--cart
+    {
+        display: block;
+    }
+    .header-with-search
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+   
+   .container__father
+   {
+       display: flex;
+       flex-wrap: nowrap;
+       overflow-x: auto;
+       scroll-snap-type: x;
+   }
+   .home__category--item
+   {
+        scroll-snap-align: start;
+   }
+.section__category--active
+{
+    display: block;
+}
+ 
+    .section__product--top--item
+    {
+        scroll-snap-align: start;
+    }
+}
+/* Mobile */
+@media (max-width:739px)
+{
+    .hide-on-mobile
+    {
+        display: none;
+    }
+    .slider
+    {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-clip: inherit;
+    }
+    .header__mobile-tablet--bars--icon
+    {
+        font-size: 1.8rem;
+    }
+    .header__mobile-tablet--search--icon
+    {
+        font-size: 1.8rem;
+    }
+    .header__mobile-tablet--cart--icon
+    {
+        font-size: 1.8rem;
+        position: relative;
+    }
+    .mobile-tablet--cart--icon__number
+    {
+        position: absolute;
+        font-size: 1.4rem;
+        background-color: #ec4f21;
+        color: var(--primary-color);
+        padding: 2px 4px;
+        border-radius: 2rem;
+        right:5%;
+        top:50%;
+        transform: translateY(-100%);
+    }
+    .mobile-tablet-search--category,
+    .mobile-tablet-cart--category,
+    .mobile-tablet__navigation
+    {
+        width: 300px;
+    }
+    .item__double--icon
+    {
+        margin-left: 153px;
+    }
+    .section__category
+    {
+        margin-top: 20px;
+    }
+    .section__category--heading
+    {
+        font-size: 1.8rem;
+    }
+    .section__category--description
+    {
+        font-size: 1.4rem;
+    }
+    .section__product--top--item__img--item
+    {
+        width: 40px;
+        height: auto;
+    }
+    .section__product--top--item__infor
+    {
+        font-size: 1.4rem;
+    }
+    .section__product--top--item__price
+    {
+        font-size: 1.4rem;
+    }
+    .section__brands--img
+    {
+        width: 100%;
+    }
+    .section__product--price
+    {
+        margin: 10px 0 10px 0;
+    }
+    .section__product--item__price--new
+    {
+        font-size: 1.4rem;
+    }
+    .section__product--top--item__price--cancel
+    {
+        font-size: 1.4rem;
+    }
+    .section__adv--item
+    {
+        padding: 8px 12px;
+    }
+    .section__adv--img
+    {
+        
+    }
+    .section__furniture--item
+    {
+        padding-left: 6px;
+    }
+   .section__furniture--item__title
+   {
+       font-size: 1.6rem;
+   }
+   .section__resgister--input
+   {
+       max-width: 220px;
+       width: 210px;
+   }
+   .footer__item
+   {
+       padding: 0 10px;
+   }
+   .section__resgister
+   {
+       background-size: cover;
+       background-repeat: no-repeat;
+       height: 200px;
+        width: 100%;
+   }
+   .section__resgister--btn
+   {
+       padding: 0 20px;
+   }
+   .section__product--top--item__price--cancel
+   {
+       margin-left: 4px;
+   }
+   .section__product--price
+   {
+       padding-left: 3px;
+   }
+}
+/* Tablet */
+@media(min-width:740px) and (max-width:1023px)
+{
+    .hide-on-tablet
+    {
+        display: none;
+    }
+    .header-with-search
+    {
+        /* margin: 0 26px; */
+    }
+    .section__category--active
+    {
+        font-size: 1.8rem;
+    }
+    .section__brands--img
+    {
+        width: 100%;
+    }
+    .section__product--price
+    {
+        margin: 12px 0 10px 0;
+    }
+    
+}
+
+@media (width:1024px) and (max-width:1336px)
+{
+    .header__fill{
+        padding-left: 29px;
+    }
+    .header__search
+    {
+        width: 460px;
+    }
+    .header__fill--link
+    {
+        font-size: 1.4rem;
+    }
+    .favorite--notice
+    {
+         right: 7%;
+        top:-75%;
+    }
+    .cart--notice
+    {
+        top:-60%;
+    }
+
+   
+   
+   
+}

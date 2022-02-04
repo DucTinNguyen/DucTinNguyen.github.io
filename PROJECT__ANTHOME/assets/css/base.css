@@ -1,0 +1,22 @@
+:root
+{
+    --primary-color:#fff;
+    --text-nav:#222;
+    --text-title:#1c1c1c;
+    --price-color:#ff560b;
+    --price-cancel:#4B4343;
+    --text-description:#666;
+    --text-desFooter:#141414;
+    --heigh-header:125px;
+  --heigh--header-with-search:70px;
+  --heigh--header-nav:calc(var(--heigh-header) - var(--heigh--header-with-search));
+}
+*{
+    box-sizing: border-box;
+    
+}
+html
+{
+    font-size: 62.5%;
+    font-family: 'Exo 2', sans-serif;
+}
