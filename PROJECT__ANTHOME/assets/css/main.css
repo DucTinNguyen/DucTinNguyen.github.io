@@ -979,8 +979,8 @@
    {
         height: 39px;
         border:none;
-       text-align: center;
-       padding: 0 33px;
+        text-align: center;
+        padding: 0 33px;
         background-color: #000;
         color:var(--primary-color);
         font-size: 1.6rem;
